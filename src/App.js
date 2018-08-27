@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import DOCUMENT from "./DOCUMENT";
 
 class App extends Component {
   render() {
+    const document = DOCUMENT;
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>Render the document here</p>
+        <pre>{JSON.stringify(document, null, 2)}</pre>
       </div>
     );
   }
